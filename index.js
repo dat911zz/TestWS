@@ -62,7 +62,7 @@ app.put('/pets/:id', (req, res) => {
   if (petIndex === -1) {
     res.status(404).json({ message: `Pet with ID ${id} not found` });
   } else {
-    const { id, type, price } = req.body;
+    const { type, price } = req.body;
     const pet = { id, type, price };
     petList[petIndex] = pet;
     res.json(pet);
