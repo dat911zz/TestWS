@@ -9,9 +9,9 @@
   "author": "dat911zz",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dat911zz/TestWS.git"
