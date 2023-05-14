@@ -1,6 +1,6 @@
 {
-  "name": "testapp",
-  "version": "1.0.0",
+  "name": "testws",
+  "version": "1.0.1",
   "description": "nope",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,17 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dat911zz/TestWS.git"
+  },
+  "keywords": [
+    "nothing"
+  ],
+  "bugs": {
+    "url": "https://github.com/dat911zz/TestWS/issues"
+  },
+  "homepage": "https://github.com/dat911zz/TestWS#readme"
 }
