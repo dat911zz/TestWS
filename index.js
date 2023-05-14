@@ -42,11 +42,11 @@ app.get('/pets/:id', (req, res) => {
 app.post('/pets', (req, res) => {
   try {
     const newPet = {
-      id: petshop.length + 1,
+      id: petList.length + 1,
       type: req.body.type,
       price: req.body.price,
     };
-    petshop.push(newPet);
+    petList.push(newPet);
     res.status(201).json(newPet);
   } catch (err) {
     console.error(err);
