@@ -42,7 +42,7 @@ app.post('/pets', (req, res) => {
   const { type, price } = req.body;
 
   if (!type || !price) {
-    res.status(400).json({ message: 'Please provide name, species, and age for the pet' });
+    res.status(400).json({ message: 'Please provide type and price for the pet' });
   } else {
     const id = petList.length + 1;
     const pet = { id, type, price };
