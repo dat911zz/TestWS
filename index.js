@@ -43,7 +43,7 @@ app.get('/pets/:id', (req, res) => {
 app.post('/pets', (req, res) => {
   try {
     const newPet = {
-      id: petList.length + 1,
+      id: petList.findLast().id + 1,
       type: req.body.type,
       price: req.body.price,
     };
