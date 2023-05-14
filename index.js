@@ -40,18 +40,19 @@ app.get('/pets/:id', (req, res) => {
 
 // Create a new pet in the petList
 app.post('/pets', (req, res) => {
-  try {
-    const newPet = {
-      id: petshop.length + 1,
-      type: req.body.type,
-      price: req.body.price,
-    };
-    petshop.push(newPet);
-    res.status(201).json(newPet);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Internal Server Error');
-  }
+  res.send(req.body);
+  // try {
+  //   const newPet = {
+  //     id: petshop.length + 1,
+  //     type: req.body.type,
+  //     price: req.body.price,
+  //   };
+  //   petshop.push(newPet);
+  //   res.status(201).json(newPet);
+  // } catch (err) {
+  //   console.error(err);
+  //   res.status(500).send('Internal Server Error');
+  // }
 });
 // Update an existing pet by ID
 app.put('/pets/:id', (req, res) => {
