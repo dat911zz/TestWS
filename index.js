@@ -77,7 +77,7 @@ app.delete('/pets/:id', (req, res) => {
     res.status(404).json({ message: `Pet with ID ${id} not found` });
   } else {
     petList.splice(petIndex, 1);
-    res.status(204).send();
+    res.status(204).json({ message: 'Pet with ID ${id} has successfully deleted!'});
   }
 });
 
