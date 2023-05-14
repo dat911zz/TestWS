@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+
 var petList = [
   {
     "id": 1,
@@ -39,18 +40,19 @@ app.get('/pets/:id', (req, res) => {
 
 // Create a new pet in the petList
 app.post('/pets', (req, res) => {
-  const { type, price } = req.body;
-
-  if (!type || !price) {
-    res.status(400).json({ message: 'Please provide type and price for the pet' });
-  } else {
-    const id = petList.length + 1;
-    const pet = { id, type, price };
-    petList.push(pet);
-    res.status(201).json(pet);
+  try {
+    const newPet = {
+      id: petshop.length + 1,
+      type: req.body.type,
+      price: req.body.price,
+    };
+    petshop.push(newPet);
+    res.status(201).json(newPet);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
   }
 });
-
 // Update an existing pet by ID
 app.put('/pets/:id', (req, res) => {
   const id = parseInt(req.params.id);
