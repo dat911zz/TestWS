@@ -50,7 +50,7 @@ app.post('/pets', (req, res) => {
     res.status(201).json(newPet);
   } catch (err) {
     console.error(err);
-    res.status(500).send('Internal Server Error: ' + err + ' || ' + body);
+    res.status(500).send('Internal Server Error: ' + err + ' || ' + req.body);
   }
 });
 // Update an existing pet by ID
